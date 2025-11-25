@@ -44,7 +44,11 @@ korištena struktura podataka u Python programima. Pogledajmo kako možemo
 stvoriti popis i dohvatiti neki element iz njega.
 
 ``` python
->>> boje = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama >>> print(boje) ["crvena", "zelena", "plava"]# elemente dohvaćamo uglatim zagradama i indeksom pozicije # indeksi počinju od 0, odnosno prvi element popisa se nalazi na indeksu 0 >>> prva_boja = boje[0] >>> print(prva_boja) crvena
+
+>>> boje = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama 
+>>> print(boje) ["crvena", "zelena", "plava"]# elemente dohvaćamo uglatim zagradama i indeksom pozicije # indeksi počinju od 0, odnosno prvi element popisa se nalazi na indeksu 0 
+>>> prva_boja = boje[0] 
+>>> print(prva_boja) crvena
 ```
 
 Primjer je prikazao najjednostavniji način stvaranja popisa. Zarezom
@@ -53,7 +57,10 @@ napomenuti i da unutar popisa, kao i u ostalim zagradama u Pythonu,
 možemo dodavati nove retke radi preglednosti. Na primjer:
 
 ``` python
->>> boje_a = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama# popis boje_b identičan je popisu boje_a, samo je raspisan drugačije >>> boje_b = [ "crvena", "zelena", "plava" ]>>> boje_a == boje_b True
+
+>>> boje_a = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama# popis boje_b identičan je popisu boje_a, samo je raspisan drugačije 
+>>> boje_b = [ "crvena", "zelena", "plava" ]
+>>> boje_a == boje_b True
 ```
 
 Mogućnost pisanja struktura u više redaka je korisna za osiguranje
@@ -73,7 +80,18 @@ brojeva, kao indekse možemo koristiti i negativne brojeve i raspone
 brojeva:
 
 ``` python
->>> boje = ["crvena", "zelena", "plava", "žuta", "ljubičasta"]# dohvati drugu boju iz popisa, odnosno boju na indeksu 1 >>> druga_boja = boje[1] >>> print(druga_boja) zelena# dohvati zadnju boju iz popisa >>> zadnja_boja = boje[-1] >>> print(zadnja_boja) ljubičasta# dohvati raspon vrijednosti iz popisa >>> neke_boje = boje[1:4] # dohvaća vrijednosti pod indeksima 1, 2 i 3 >>> print(neke_boje) ["zelena", "plava", "žuta"] # kod raspona indeksa, vrijednost prvog indeksa je uvijek # uključena u rezultat, a zadnja nije# ukoliko ispustimo zadnji indeks u rasponu, to znači "odaberi do kraja" >>> sve_osim_prve = boje[1:] >>> sve_osim_prve ["zelena", "plava", "žuta", "ljubičasta"]# ukoliko ispustimo prvi indeks u rasponu, to znači "odaberi od početka" >>> sve_osim_zadnje = boje[:-1] >>> sve_osim_zadnje ["crvena", "zelena", "plava", "žuta"]
+
+>>> boje = ["crvena", "zelena", "plava", "žuta", "ljubičasta"]# dohvati drugu boju iz popisa, odnosno boju na indeksu 1 
+>>> druga_boja = boje[1] 
+>>> print(druga_boja) zelena# dohvati zadnju boju iz popisa 
+>>> zadnja_boja = boje[-1] 
+>>> print(zadnja_boja) ljubičasta# dohvati raspon vrijednosti iz popisa 
+>>> neke_boje = boje[1:4] # dohvaća vrijednosti pod indeksima 1, 2 i 3 
+>>> print(neke_boje) ["zelena", "plava", "žuta"] # kod raspona indeksa, vrijednost prvog indeksa je uvijek # uključena u rezultat, a zadnja nije# ukoliko ispustimo zadnji indeks u rasponu, to znači "odaberi do kraja" 
+>>> sve_osim_prve = boje[1:] 
+>>> sve_osim_prve ["zelena", "plava", "žuta", "ljubičasta"]# ukoliko ispustimo prvi indeks u rasponu, to znači "odaberi od početka" 
+>>> sve_osim_zadnje = boje[:-1] 
+>>> sve_osim_zadnje ["crvena", "zelena", "plava", "žuta"]
 ```
 
 Jedan od problema sa strukturama podataka je što je riječ o apstraktnim
@@ -82,7 +100,9 @@ primjere. Ipak, kako bismo se barem približili praksi pogledajmo kako
 dobiti popis članova nekog direktorija:
 
 ``` python
->>> import os >>> os.listdir(’c:/test’) [’dat_a.pdf’, ’dat_b.docx’, ’dat_c.txt’, ’dir_a’, ’dir_b’]
+
+>>> import os 
+>>> os.listdir(’c:/test’) [’dat_a.pdf’, ’dat_b.docx’, ’dat_c.txt’, ’dir_a’, ’dir_b’]
 ```
 
 Primjer prikazuje kako dobiti popis članova nekog direktorija odnosno
@@ -127,7 +147,10 @@ Najjednostavnija promjena popisa je promjena vrijednosti koja se nalazi
 na nekom indeksu. Pogledajmo primjer:
 
 ``` python
->>> boje = ["crvena", "zelena", "plava"] >>> boje[1] = "ljubičasta" # postavi drugi element popisa na vrijednost "ljubičasta" >>> print(boje) ["crvena", "ljubičasta", "plava"]
+
+>>> boje = ["crvena", "zelena", "plava"] 
+>>> boje[1] = "ljubičasta" # postavi drugi element popisa na vrijednost "ljubičasta" 
+>>> print(boje) ["crvena", "ljubičasta", "plava"]
 ```
 
 Ostale promjene popisa se provode putem metoda koje pruža vrsta
@@ -155,7 +178,26 @@ jednostavne i očekivanje radnje. Pogledajmo koje su to:
 Pogledajmo primjere:
 
 ``` python
->>> boje = ["crvena", "zelena", "plava"]# dodaj vrijednost na kraj popisa >>> boje.append("žuta") >>> print(boje) ["crvena", "zelena", "plava", "žuta"]# proširi popis svim vrijednostima iz drugog popisa >>> druge_boje = ["crna", "bijela"] >>> boje.extend(druge_boje) >>> print(boje) ["crvena", "zelena", "plava", "žuta", "crna", "bijela"]# ubaci vrijednost na određeni indeks >>> boje.insert(2, "zelena") >>> print(boje) ["crvena", "zelena", "zelena", "plava", "žuta", "crna", "bijela"]# dohvati i izbaci zadnju vrijednost u popisu >>> zadnja_boja = boje.pop() >>> print(zadnja_boja) bijela >>> print(boje) ["crvena", "zelena", "zelena", "plava", "žuta", "crna"]# dohvati i izbaci vrijednost u popisu na nekom indeksu >>> boje = ["crvena", "zelena", "zelena", "plava", "žuta", "crna"] >>> peta_boja = boje.pop(4) >>> print(peta_boja) žuta >>> print(boje) ["crvena", "zelena", "zelena", "plava", "crna"]# izbaci PRVU pronađenu vrijednost >>> boje.remove("zelena") >>> print(boje) ["crvena", "zelena", "plava", "crna"]# sortiraj popis >>> boje.sort() >>> print(boje) ["crna", "crvena", "plava", "zelena"]
+
+>>> boje = ["crvena", "zelena", "plava"]# dodaj vrijednost na kraj popisa 
+>>> boje.append("žuta") 
+>>> print(boje) ["crvena", "zelena", "plava", "žuta"]# proširi popis svim vrijednostima iz drugog popisa 
+>>> druge_boje = ["crna", "bijela"] 
+>>> boje.extend(druge_boje) 
+>>> print(boje) ["crvena", "zelena", "plava", "žuta", "crna", "bijela"]# ubaci vrijednost na određeni indeks 
+>>> boje.insert(2, "zelena") 
+>>> print(boje) ["crvena", "zelena", "zelena", "plava", "žuta", "crna", "bijela"]# dohvati i izbaci zadnju vrijednost u popisu 
+>>> zadnja_boja = boje.pop() 
+>>> print(zadnja_boja) bijela 
+>>> print(boje) ["crvena", "zelena", "zelena", "plava", "žuta", "crna"]# dohvati i izbaci vrijednost u popisu na nekom indeksu 
+>>> boje = ["crvena", "zelena", "zelena", "plava", "žuta", "crna"] 
+>>> peta_boja = boje.pop(4) 
+>>> print(peta_boja) žuta 
+>>> print(boje) ["crvena", "zelena", "zelena", "plava", "crna"]# izbaci PRVU pronađenu vrijednost 
+>>> boje.remove("zelena") 
+>>> print(boje) ["crvena", "zelena", "plava", "crna"]# sortiraj popis 
+>>> boje.sort() 
+>>> print(boje) ["crna", "crvena", "plava", "zelena"]
 ```
 
 ##### Informacije o članstvu popisa
@@ -173,7 +215,9 @@ informiranju o članovima popisa:
 Petlja "za svaki", naravno, normalno radi s popisima.
 
 ``` python
->>> boje = ["crvena", "zelena", "plava"] >>> for boja in boje: print(boja)
+
+>>> boje = ["crvena", "zelena", "plava"] 
+>>> for boja in boje: print(boja)
 ```
 
 Rezltat:
@@ -188,7 +232,17 @@ Ta funkcija služi stvaranju niza brojeva od nekog početnog do nekog
 završnog. Pogledajmo primjere:
 
 ``` python
->>> r = range(2, 10) >>> print(r) range(2, 10) # range nije popis! >>> print(list(r)) # ali bilo koji range možemo pretvoriti u popis [2, 3, 4, 5, 6, 7, 8, 9]>>> r = range(0, 5) >>> print(list(r)) [0, 1, 2, 3, 4]>>> r = range(5) # ako pošaljemo samo jedan broj, smatra se da je početni broj 0 >>> print(list(r)) [0, 1, 2, 3, 4]>>> boje = ["crvena", "zelena", "zelena", "plava", "crna"] >>> broj_boja = len(boje) >>> for i in range(broj_boja): print("Na indeksu", i, "nalazi se", boje[i])Na indeksu 0 nalazi se crvena Na indeksu 1 nalazi se zelena Na indeksu 2 nalazi se zelena Na indeksu 3 nalazi se plava Na indeksu 4 nalazi se crna
+
+>>> r = range(2, 10) 
+>>> print(r) range(2, 10) # range nije popis! 
+>>> print(list(r)) # ali bilo koji range možemo pretvoriti u popis [2, 3, 4, 5, 6, 7, 8, 9]
+>>> r = range(0, 5) 
+>>> print(list(r)) [0, 1, 2, 3, 4]
+>>> r = range(5) # ako pošaljemo samo jedan broj, smatra se da je početni broj 0 
+>>> print(list(r)) [0, 1, 2, 3, 4]
+>>> boje = ["crvena", "zelena", "zelena", "plava", "crna"] 
+>>> broj_boja = len(boje) 
+>>> for i in range(broj_boja): print("Na indeksu", i, "nalazi se", boje[i])Na indeksu 0 nalazi se crvena Na indeksu 1 nalazi se zelena Na indeksu 2 nalazi se zelena Na indeksu 3 nalazi se plava Na indeksu 4 nalazi se crna
 ```
 
 Kao što vidimo, funkcija `range` posebno je korisna za generiranje
@@ -209,7 +263,13 @@ jedan:
 <div class="minipage">
 
 ``` python
->>> r = range(1, 10) >>> print(r) range(1, 10) >>> print(list(r)) [1, 2, 3, 4, 5, 6, 7, 8, 9]# range sa zadanim minimumom, maksimumom i korakom >>> r = range(1, 10, 2) >>> print(r) range(1, 10, 2) >>> print(list(r)) [1, 3, 5, 7, 9]
+
+>>> r = range(1, 10) 
+>>> print(r) range(1, 10) 
+>>> print(list(r)) [1, 2, 3, 4, 5, 6, 7, 8, 9]# range sa zadanim minimumom, maksimumom i korakom 
+>>> r = range(1, 10, 2) 
+>>> print(r) range(1, 10, 2) 
+>>> print(list(r)) [1, 3, 5, 7, 9]
 ```
 
 </div>
@@ -274,7 +334,10 @@ Broj objekata u nekoj strukturi podataka često se naziva i “duljinom” te
 strukture. Python funkcija `len` vraća upravo taj broj.
 
 ``` python
->>> boje = ["crvena", "zelena", "plava"] >>> n_boja = len(boje) >>> print(n_boja) 3
+
+>>> boje = ["crvena", "zelena", "plava"] 
+>>> n_boja = len(boje) 
+>>> print(n_boja) 3
 ```
 
 `len` je funkcija koja radi na svim vrstama objekata za koje je pitanje
@@ -294,7 +357,11 @@ nalazi u određenoj zbirci vrijednosti i to putem operatora `in`.
 Pogledajmo primjere:
 
 ``` python
->>> if "š" in "Krešimir": print(’"Krešimir" sadrži "š".’)"Krešimir" sadrži "š".>>> boje = ["crvena", "zelena", "zelena", "plava", "crna"] >>> "zelena" in boje True>>> "žuta" in boje False
+
+>>> if "š" in "Krešimir": print(’"Krešimir" sadrži "š".’)"Krešimir" sadrži "š".
+>>> boje = ["crvena", "zelena", "zelena", "plava", "crna"] 
+>>> "zelena" in boje True
+>>> "žuta" in boje False
 ```
 
 #### Rječnik
@@ -307,7 +374,10 @@ i s dvotočkom kao znakom koji razgraničuje ključeve od vrijednosti.
 Pogledajmo primjer:
 
 ``` python
->>> data = "boja": "plava", "visina": 30 # rječnik s dva elementa # svaki element se sastoji od ključa # i vrijednosti koja mu je pridružena >>> print(data["boja"]) plava >>> print(data["visina"]) 30
+
+>>> data = "boja": "plava", "visina": 30 # rječnik s dva elementa # svaki element se sastoji od ključa # i vrijednosti koja mu je pridružena 
+>>> print(data["boja"]) plava 
+>>> print(data["visina"]) 30
 ```
 
 Rječnik je vrlo intuitivna struktura za opis nekog predmeta odnosno za
@@ -369,7 +439,9 @@ označavaju vrstu vrijednosti, poziv bez parametara stvara prazan
 rječnik.
 
 ``` python
->>> d = dict() # isto što i d = >>> print(d)
+
+>>> d = dict() # isto što i d = 
+>>> print(d)
 ```
 
 Poziv na `dict` s imenovanim parametrima stvara novi rječnik s tim
@@ -394,7 +466,14 @@ Pythonu, skup možemo shvatiti kao samo ključeve rječnika bez pridruženih
 vrijednosti.
 
 ``` python
->>> s = set() >>> s.add(1) >>> print(s) 1 >>> s.add(2) >>> print(s) 1, 2 >>> s.add(2) # skup već sadrži vrijednost 2 pa nema promjene >>> print(s) 1, 2
+
+>>> s = set() 
+>>> s.add(1) 
+>>> print(s) 1 
+>>> s.add(2) 
+>>> print(s) 1, 2 
+>>> s.add(2) # skup već sadrži vrijednost 2 pa nema promjene 
+>>> print(s) 1, 2
 ```
 
 Skup je rjeđe korištena struktura od popisa i rječnika, ali je vrlo
@@ -411,7 +490,20 @@ možemo koristiti i vitičaste zagrade. Pogledajmo neke primjere
 definicije skupova:
 
 ``` python
->>> s = # pažnja! prazan rječnik >>> print(s)>>> s = set() # prazan skup >>> print(s) set()>>> s = "a", "b", "c" # skup s članovima >>> print(s) "a", "c", "b">>> s = set("ana") # napravi skup od elemenata vrijednosti (npr, tekst) >>> s "a", "n">>> s = set(["ana"]) # napravi skup od elemenata popisa >>> s "ana">>> d = "a": 1, "b": 2, "c": 1 # definiraj neki rječnik >>> set(d) # ključevi rječnika kao skup "a", "c", "b" >>> set(d.values()) # sve različite vrijednosti u rječniku 1, 2
+
+>>> s = # pažnja! prazan rječnik 
+>>> print(s)
+>>> s = set() # prazan skup 
+>>> print(s) set()
+>>> s = "a", "b", "c" # skup s članovima 
+>>> print(s) "a", "c", "b"
+>>> s = set("ana") # napravi skup od elemenata vrijednosti (npr, tekst) 
+>>> s "a", "n"
+>>> s = set(["ana"]) # napravi skup od elemenata popisa 
+>>> s "ana"
+>>> d = "a": 1, "b": 2, "c": 1 # definiraj neki rječnik 
+>>> set(d) # ključevi rječnika kao skup "a", "c", "b" 
+>>> set(d.values()) # sve različite vrijednosti u rječniku 1, 2
 ```
 
 ##### Operacije sa skupovima
@@ -426,7 +518,12 @@ operacije sa skupovima poput unije, presjeka i razlike, odnosno
 operacije koje su vrlo korisne u radu s podacima. Pogledajmo primjere:
 
 ``` python
->>> a.intersection(b) # ili a & b "c", "b" >>> a & b # isto što i a.intersection(b) "c", "b" >>> a.union(b) # ili a | b "a", "d", "c", "b" >>> a.difference(b) # ili a - b "a" >>> b.difference(a) # ili b - a "d"
+
+>>> a.intersection(b) # ili a & b "c", "b" 
+>>> a & b # isto što i a.intersection(b) "c", "b" 
+>>> a.union(b) # ili a | b "a", "d", "c", "b" 
+>>> a.difference(b) # ili a - b "a" 
+>>> b.difference(a) # ili b - a "d"
 ```
 
 Također, svojstvo skupa da sadrži samo različite vrijednosti je često
@@ -435,7 +532,11 @@ iskoristiti da prebrojimo sve jedinstvene vrijednosti u nekoj zbirci
 vrijednosti.
 
 ``` python
->>> boje = ["crvena", "plava", "crvena", "zelena", "plava"] >>> skup_boja = set(boje) >>> print("N boja:", len(boje)) N boja: 4 >>> print("N različitih boja:", len(skup_boja)) N različitih boja: 3
+
+>>> boje = ["crvena", "plava", "crvena", "zelena", "plava"] 
+>>> skup_boja = set(boje) 
+>>> print("N boja:", len(boje)) N boja: 4 
+>>> print("N različitih boja:", len(skup_boja)) N različitih boja: 3
 ```
 
 Prikazane strukture podataka izvrsan su prvi susret s temom i već samo
