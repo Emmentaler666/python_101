@@ -277,8 +277,8 @@ da su raniji koncepti već usvojeni.
 
 Osim spomenute vrste primjera, postoji još jedna:
 
-Primjeri u kojima neki reci počinju s \"$
->>>$\" su česti u Python
+Primjeri u kojima neki reci počinju s "$
+>>>$" su česti u Python
 literaturi i označavaju da se radi o interaktivnom izvršavanju kôda
 kojeg je korisnik unio u komandnu liniju kao što smo prikazali ranije.
 Na ovaj način se često prikazuju osnovni koncepti, a pojava ovakvog
@@ -288,13 +288,11 @@ i mehanizme.
 
 Riječ je o mogućnosti Pythona da se kôd upisuje i izvršava redak po
 redak što je izvrsno za učenje jezika jer omogućava direktnu
-eksperimentaciju. Reci koji počinju s \"$
->>>$\" su oni koje mi upisujemo
+eksperimentaciju. Reci koji počinju s "$
+>>>$" su oni koje mi upisujemo
 u Python komandnu liniju, a reci bez tih znakova se mogu pojaviti samo
-nakon redaka s početnim \"$
->>>$\" i prikazuju rezultat izvršavanja
-prijašnjeg retka, ako postoji. Naravno, znakovi \"$
->>>$\" nisu dio kôda
+nakon redaka s početnim "$" i prikazuju rezultat izvršavanja
+prijašnjeg retka, ako postoji. Naravno, znakovi "$" nisu dio kôda
 već jednostavno naznaka gdje se nalazi početak linije koja se izvršila.
 Drugim riječima, njih ne prepisujemo kada želimo isprobati kôd!
 
