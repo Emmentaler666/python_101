@@ -21,7 +21,12 @@ najviše ovisi o tome da li sam tekstovni niz već sadrži apostrofe ili
 navodnike. Ovo je najjednostavnije objasniti primjerima:
 
 ``` python
->>> tekst = "ovo je u navodnicima pa se smatra tekstom" >>> tekst = ’ovo je u apostrofima pa se isto smatra tekstom’ >>> tekst = "ako je ’ u tekstu moramo koristiti navodnike" >>> tekst = ’ako je " u tekstu koristi apostrofe’ >>> tekst = "ovaj "tekst" nije validno zapisan" SyntaxError: invalid syntax
+
+>>> tekst = "ovo je u navodnicima pa se smatra tekstom" 
+>>> tekst = ’ovo je u apostrofima pa se isto smatra tekstom’ 
+>>> tekst = "ako je ’ u tekstu moramo koristiti navodnike" 
+>>> tekst = ’ako je " u tekstu koristi apostrofe’ 
+>>> tekst = "ovaj "tekst" nije validno zapisan" SyntaxError: invalid syntax
 ```
 
 U primjeru gore su prikazani najčešći načini zapisivanja teksta u Python
@@ -87,7 +92,9 @@ posebnih slova tiče, u sljedećem primjeru vidimo da ih možemo koristiti
 bez posebnih koncepata:
 
 ``` python
->>> tekst = "Python 3 radi bez problema s čžšćđ" >>> print(tekst) python radi bez problema s čžšćđ
+
+>>> tekst = "Python 3 radi bez problema s čžšćđ" 
+>>> print(tekst) python radi bez problema s čžšćđ
 ```
 
 Isto vrijedi i za druga pisma poput ćirilice ili kineskog pisma.
@@ -112,7 +119,15 @@ pozicijom, odnosno indeksima, individualnih znakova i uglatim zagradama.
 Pogledajmo primjer:
 
 ``` python
->>> tekst = "Monty Python i značenje života." >>> tekst[0] # dohvati prvi znak ’M’ >>> tekst[1] # dohvati drugi znak ’o’ >>> tekst[0:5] # dohvati znakove 0, 1, 2, 3, 4 ’Monty’ >>> tekst[6:12] # dohvati znakove 6, 7, 8, 9, 10, 11 ’Python’ >>> tekst[-1] # dohvati zadnji znak ’.’ >>> tekst[-2] # dohvati predzadnji znak ’a’ # dohvati od prvog znaka pa sve dok se ne pojavi znak y prvi put >>> tekst[0:tekst.find(’y’)] ’Mont’
+
+>>> tekst = "Monty Python i značenje života." 
+>>> tekst[0] # dohvati prvi znak ’M’ 
+>>> tekst[1] # dohvati drugi znak ’o’ 
+>>> tekst[0:5] # dohvati znakove 0, 1, 2, 3, 4 ’Monty’ 
+>>> tekst[6:12] # dohvati znakove 6, 7, 8, 9, 10, 11 ’Python’ 
+>>> tekst[-1] # dohvati zadnji znak ’.’ 
+>>> tekst[-2] # dohvati predzadnji znak ’a’ # dohvati od prvog znaka pa sve dok se ne pojavi znak y prvi put 
+>>> tekst[0:tekst.find(’y’)] ’Mont’
 ```
 
 Kao što vidimo dijelove tekstualnog niza možemo dohvatiti tako što nakon
@@ -149,7 +164,13 @@ Vrlo česta radnja s tekstom je promjena iz velikih slova u mala i
 obratno. Pogledajmo koje mogućnosti nam dopušta sama vrsta *str*:
 
 ``` python
->>> tekst = "cvrči CVRČI 10-ak cvrčaka" >>> tekst.lower() # pretvori sva slova u mala slova ’cvrči cvrči 10-ak cvrčaka’ >>> tekst.upper() # pretvori sva slova u velika slova ’CVRČI CVRČI 10-AK CVRČAKA’ >>> tekst.capitalize() # pretvori prvo slovo u veliko, a ostala u mala ’Cvrči cvrči 10-ak cvrčaka’ >>> tekst.title() # pretvori prvo slovo svake riječi u veliko, a ostala u mala ’Cvrči Cvrči 10-Ak Cvrčaka’ >>> tekst.swapcase() # velika slova u mala, a mala u velika ’CVRČI cvrči 10-AK CVRČAKA’
+
+>>> tekst = "cvrči CVRČI 10-ak cvrčaka" 
+>>> tekst.lower() # pretvori sva slova u mala slova ’cvrči cvrči 10-ak cvrčaka’ 
+>>> tekst.upper() # pretvori sva slova u velika slova ’CVRČI CVRČI 10-AK CVRČAKA’ 
+>>> tekst.capitalize() # pretvori prvo slovo u veliko, a ostala u mala ’Cvrči cvrči 10-ak cvrčaka’ 
+>>> tekst.title() # pretvori prvo slovo svake riječi u veliko, a ostala u mala ’Cvrči Cvrči 10-Ak Cvrčaka’ 
+>>> tekst.swapcase() # velika slova u mala, a mala u velika ’CVRČI cvrči 10-AK CVRČAKA’
 ```
 
 Kao što vidimo, postoji više metoda za promjenu veličine slova i iz
@@ -177,7 +198,11 @@ strane) teksta, ali ne i iz sredine. Najčešći slučaj u ovom kontekstu je
 brisanje praznog prostora. Pogledajmo primjer:
 
 ``` python
->>> tekst = ’ korisnički unos ’ >>> tekst.lstrip() # left strip, ukloni prazan prostor s početka ’korisnički unos ’ >>> tekst.rstrip() # right strip, ukloni prazan prostor s kraja ’ korisnički unos’ >>> tekst.strip() # strip, ukloni prazan prostor s obje strane ’korisnički unos’
+
+>>> tekst = ’ korisnički unos ’ 
+>>> tekst.lstrip() # left strip, ukloni prazan prostor s početka ’korisnički unos ’ 
+>>> tekst.rstrip() # right strip, ukloni prazan prostor s kraja ’ korisnički unos’ 
+>>> tekst.strip() # strip, ukloni prazan prostor s obje strane ’korisnički unos’
 ```
 
 Metode `lstrip`, `rstrip` i `strip` pozvane bez parametara, dakle, miču
@@ -194,7 +219,11 @@ uklanjamo razmake kako isti ne bi završili u zapisanim podacima.
 razmake? Pogledajmo kako u sljedećem primjeru.
 
 ``` python
->>> tekst = ’.! 2000 .!’ >>> tekst.strip(’.’) # ukloni točku s početka i kraja ’! 2000 .!’ >>> tekst.strip(’.!’) # ukloni bilo koju kombinaciju točke i uskličnika s početka i kraja ’ 2000 ’ >>> tekst.strip(’ .!’) # ukloni kombinacije razmaka, točke i uskličnika s početka i kraja ’2000’
+
+>>> tekst = ’.! 2000 .!’ 
+>>> tekst.strip(’.’) # ukloni točku s početka i kraja ’! 2000 .!’ 
+>>> tekst.strip(’.!’) # ukloni bilo koju kombinaciju točke i uskličnika s početka i kraja ’ 2000 ’ 
+>>> tekst.strip(’ .!’) # ukloni kombinacije razmaka, točke i uskličnika s početka i kraja ’2000’
 ```
 
 Metoda `strip`, dakle, prima jedan parametar koji je niz znakova i zatim
@@ -211,7 +240,11 @@ takvi slučajevi su vjerojatno znak za novi redak i znak za tabulator.
 Kako uključiti ove znakove u stringove? Pogledajmo primjer:
 
 ``` python
->>> tekst = ’Ovaj tekstredaka’ >>> print(tekst) Ovaj tekst sadrži prijelome redaka >>> tekst = ’tekst počinje s tabulatorom’ >>> print(tekst) Ovaj tekst počinje s tabulatorom
+
+>>> tekst = ’Ovaj tekstredaka’ 
+>>> print(tekst) Ovaj tekst sadrži prijelome redaka 
+>>> tekst = ’tekst počinje s tabulatorom’ 
+>>> print(tekst) Ovaj tekst počinje s tabulatorom
 ```
 
 Važan koncept pri radu s posebnim znakovima je korištenje znaka
@@ -235,7 +268,9 @@ navodnik u tekst koji neće poremetiti normalno korištenje navodnika za
 označavanje teksta.
 
 ``` python
->>> tekst = "Ovaj tekst sadrži , ï b́ez da ti znakovi imaju posebno značenje" >>> print(tekst) Ovaj tekst sadrži   " i ’ bez da ti znakovi imaju posebno značenje
+
+>>> tekst = "Ovaj tekst sadrži , ï b́ez da ti znakovi imaju posebno značenje" 
+>>> print(tekst) Ovaj tekst sadrži   " i ’ bez da ti znakovi imaju posebno značenje
 ```
 
 ### Umetanje dijelova teksta
@@ -247,7 +282,10 @@ upisati ime i prezime) imaju prazan prostor za to koji se često
 naznačuje s "\_\_\_\_\_\_\_\_\_\_\_\_". Pogledajmo primjer:
 
 ``` python
->>> tekst = ’ Bi sam i ’ >>> tekst.format(’o’, ’vani’, ’ludo sam se zabavio!’) ’Bio sam vani i ludo sam se zabavio!’ >>> tekst.format(’la’, ’na predavanju’, ’bilo mi je dosadno :( !’) ’Bila sam na predavanju i bilo mi je dosadno :( !’
+
+>>> tekst = ’ Bi sam i ’ 
+>>> tekst.format(’o’, ’vani’, ’ludo sam se zabavio!’) ’Bio sam vani i ludo sam se zabavio!’ 
+>>> tekst.format(’la’, ’na predavanju’, ’bilo mi je dosadno :( !’) ’Bila sam na predavanju i bilo mi je dosadno :( !’
 ```
 
 U prikazanom primjeru, znakovi "{}" se koriste u smislu
@@ -263,7 +301,10 @@ i da imenujemo mjesta za ubacivanje i zatim u njih ubacujemo vrijednosti
 prema tim imenima. Pogledajmo primjer:
 
 ``` python
->>> tekst = """ Bio sam u mjesto.Tamo sam radnja. Bilo mi je kako jer je vrijeme u mjesto bilo vrijeme. """ >>> t = tekst.format(mjesto = ’Zadru’, radnja=’se kupao’, kako=’sjajno’, vrijeme=’lijepo’) >>> print(t)Bio sam u Zadru.Tamo sam se kupao. Bilo mi je sjajno jer je vrijeme u Zadru bilo lijepo.
+
+>>> tekst = """ Bio sam u mjesto.Tamo sam radnja. Bilo mi je kako jer je vrijeme u mjesto bilo vrijeme. """ 
+>>> t = tekst.format(mjesto = ’Zadru’, radnja=’se kupao’, kako=’sjajno’, vrijeme=’lijepo’) 
+>>> print(t)Bio sam u Zadru.Tamo sam se kupao. Bilo mi je sjajno jer je vrijeme u Zadru bilo lijepo.
 ```
 
 U ovom primjeru pojavljuje nam se novi koncept: *imenovani parametri
@@ -289,7 +330,15 @@ njegovu obradu te našim ciljevima. Pogledajmo zato ovdje samo još neke
 česte radnje s tekstom:
 
 ``` python
->>> tekst = ’Ne da mi se ovo čitati.’# zamijeni sve znakove "a" sa znakom "x" >>> tekst.replace(’a’, ’x’) ’ne dx mi se ovo čitxt’ # može i s duljim nizovima >>> tekst.replace(’ne da mi se’, ’želim’) ’želim ovo čitat’# da li neki tekst sadrži znak ili drugi manji tekst >>> ’o’ in tekst True >>> ’u’ in tekst False >>> ’ovo’ in tekst True# prebroji koliko se puta pojavljuje neki tekst u duljem tekstu >>> tekst.count(’a’) 2 # pronađi poziciju na kojoj se prvi put pojavljuje neki tekst u duljem tekstu >>> tekst.find(’a’) 4
+
+>>> tekst = ’Ne da mi se ovo čitati.’# zamijeni sve znakove "a" sa znakom "x" 
+>>> tekst.replace(’a’, ’x’) ’ne dx mi se ovo čitxt’ # može i s duljim nizovima 
+>>> tekst.replace(’ne da mi se’, ’želim’) ’želim ovo čitat’# da li neki tekst sadrži znak ili drugi manji tekst 
+>>> ’o’ in tekst True 
+>>> ’u’ in tekst False 
+>>> ’ovo’ in tekst True# prebroji koliko se puta pojavljuje neki tekst u duljem tekstu 
+>>> tekst.count(’a’) 2 # pronađi poziciju na kojoj se prvi put pojavljuje neki tekst u duljem tekstu 
+>>> tekst.find(’a’) 4
 ```
 
 [^1]: Dapače, neki jezici razlikuju vrstu podataka "znak" (*char*) od
