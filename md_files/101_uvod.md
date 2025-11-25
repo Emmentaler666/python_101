@@ -212,12 +212,10 @@ aplikacija s grafičkim sučeljem, odnosno moguće ju je pokrenuti kroz
 Kada pokrenemo IDLE, dočekati će nas glavno sučelje ovog programa koje
 je prikazano na slici [2](#fig:idle){reference-type="ref"
 reference="fig:idle"}. U glavnom prozoru IDLE-a naredbe se upisuju nakon
-redaka koje počinju s "$
->>>$", a izvršavaju pritiskom na tipku *enter*
+redaka koje počinju s "$$", a izvršavaju pritiskom na tipku *enter*
 odnosno *return*. U ovom slučaju smo izvršili jednostavan *izraz*
 `1 + 1`{.python}. Kada se taj izraz evaluira pritiskom na tipku *enter*,
-rezultat se ispisuje u idućem retku koja ne započinje s "$
->>>$" kako
+rezultat se ispisuje u idućem retku koja ne započinje s "$$" kako
 bi bilo jasno da se radi o rezultatu, a ne o naredbi. Obzirom da još
 nismo spomenuli niti jednu posebnu naredbu za programske jezike,
 probajte izvesti nekoliko osnovnih matematičkih radnji. IDLE je sam po
