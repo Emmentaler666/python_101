@@ -42,7 +42,11 @@ postoji i mogućnost promjene naziva modula prilikom uvoza:
 Također, Python dozvoljava i uvoz samo jednog člana nekog modula.
 
 ``` python
->>> from math import pi >>> print(pi) 3.141592653589793 >>> pi = 100 >>> print(pi) 100
+
+>>> from math import pi 
+>>> print(pi) 3.141592653589793 
+>>> pi = 100 
+>>> print(pi) 100
 ```
 
 Na ovaj način, ne uvozimo ime `math` već direktno ime `pi`. To znači da
@@ -55,7 +59,9 @@ primjer `math.pi`). Kao i kod uvoza cijelih modula, članove možemo
 preimenovati koristeći se riječi `as`.
 
 ``` python
->>> from math import pi as x >>> print(x) 3.141592653589793
+
+>>> from math import pi as x 
+>>> print(x) 3.141592653589793
 ```
 
 ## Standardna knjižnica
@@ -148,3 +154,4 @@ koje razvijaju korisnici. Mnogi od ovih modula su veliki i kvalitetni
 projekti koji se već dugo razvijaju i koji se često koriste u znanosti i
 industriji. Katalog dodatnih modula je dostupan kroz [Python Package
 Index](https://pypi.org/) (odnosno PyPi) i sadrži preko 200 000 modula.
+
