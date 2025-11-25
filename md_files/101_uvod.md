@@ -278,8 +278,7 @@ da su raniji koncepti već usvojeni.
 Osim spomenute vrste primjera, postoji još jedna:
 
 Primjeri u kojima neki reci počinju s "$
->>>$" su česti u Python
-literaturi i označavaju da se radi o interaktivnom izvršavanju kôda
+>>>$" su česti u Python literaturi i označavaju da se radi o interaktivnom izvršavanju kôda
 kojeg je korisnik unio u komandnu liniju kao što smo prikazali ranije.
 Na ovaj način se često prikazuju osnovni koncepti, a pojava ovakvog
 primjera naznačuje da s prikazanim treba eksperimentirati u Python
