@@ -42,7 +42,7 @@ korištena struktura podataka u Python programima. Pogledajmo kako možemo
 stvoriti popis i dohvatiti neki element iz njega.
 
 ``` python
-\n>>> boje = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama \n>>> print(boje) ["crvena", "zelena", "plava"]# elemente dohvaćamo uglatim zagradama i indeksom pozicije # indeksi počinju od 0, odnosno prvi element popisa se nalazi na indeksu 0 \n>>> prva_boja = boje[0] \n>>> print(prva_boja) crvena
+\n >>> boje = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama \n >>> print(boje) ["crvena", "zelena", "plava"]# elemente dohvaćamo uglatim zagradama i indeksom pozicije # indeksi počinju od 0, odnosno prvi element popisa se nalazi na indeksu 0 \n >>> prva_boja = boje[0] \n >>> print(prva_boja) crvena
 ```
 
 Primjer je prikazao najjednostavniji način stvaranja popisa. Zarezom
@@ -51,7 +51,7 @@ napomenuti i da unutar popisa, kao i u ostalim zagradama u Pythonu,
 možemo dodavati nove retke radi preglednosti. Na primjer:
 
 ``` python
-\n>>> boje_a = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama# popis boje_b identičan je popisu boje_a, samo je raspisan drugačije \n>>> boje_b = [ "crvena", "zelena", "plava" ]\n>>> boje_a == boje_b True
+\n >>> boje_a = ["crvena", "zelena", "plava"] # popis definiramo uglatim zagradama# popis boje_b identičan je popisu boje_a, samo je raspisan drugačije \n >>> boje_b = [ "crvena", "zelena", "plava" ] \n >>> boje_a == boje_b True
 ```
 
 Mogućnost pisanja struktura u više redaka je korisna za osiguranje
@@ -71,7 +71,7 @@ brojeva, kao indekse možemo koristiti i negativne brojeve i raspone
 brojeva:
 
 ``` python
-\n>>> boje = ["crvena", "zelena", "plava", "žuta", "ljubičasta"]# dohvati drugu boju iz popisa, odnosno boju na indeksu 1 \n>>> druga_boja = boje[1] \n>>> print(druga_boja) zelena# dohvati zadnju boju iz popisa \n>>> zadnja_boja = boje[-1] \n>>> print(zadnja_boja) ljubičasta# dohvati raspon vrijednosti iz popisa \n>>> neke_boje = boje[1:4] # dohvaća vrijednosti pod indeksima 1, 2 i 3 \n>>> print(neke_boje) ["zelena", "plava", "žuta"] # kod raspona indeksa, vrijednost prvog indeksa je uvijek # uključena u rezultat, a zadnja nije# ukoliko ispustimo zadnji indeks u rasponu, to znači "odaberi do kraja" \n>>> sve_osim_prve = boje[1:] \n>>> sve_osim_prve ["zelena", "plava", "žuta", "ljubičasta"]# ukoliko ispustimo prvi indeks u rasponu, to znači "odaberi od početka" \n>>> sve_osim_zadnje = boje[:-1] \n>>> sve_osim_zadnje ["crvena", "zelena", "plava", "žuta"]
+ \n >>> boje = ["crvena", "zelena", "plava", "žuta", "ljubičasta"]# dohvati drugu boju iz popisa, odnosno boju na indeksu 1 \n>>> druga_boja = boje[1] \n >>> print(druga_boja) zelena# dohvati zadnju boju iz popisa \n >>> zadnja_boja = boje[-1] \n>>> print(zadnja_boja) ljubičasta# dohvati raspon vrijednosti iz popisa \ \n >>> neke_boje = boje[1:4] # dohvaća vrijednosti pod indeksima 1, 2 i 3 \n >>> print(neke_boje) ["zelena", "plava", "žuta"] # kod raspona indeksa, vrijednost prvog indeksa je uvijek # uključena u rezultat, a zadnja nije# ukoliko ispustimo zadnji indeks u rasponu, to znači "odaberi do kraja" \n >>> sve_osim_prve = boje[1:] \n>>> sve_osim_prve ["zelena", "plava", "žuta", "ljubičasta"]# ukoliko ispustimo prvi indeks u rasponu, to znači "odaberi od početka" \n >>> sve_osim_zadnje = boje[:-1] \n >>> sve_osim_zadnje ["crvena", "zelena", "plava", "žuta"]
 ```
 
 Jedan od problema sa strukturama podataka je što je riječ o apstraktnim
@@ -445,5 +445,6 @@ obradu podataka.
 [^1]: Osobna imena mogu imati još djelova i upravljanje podacima o
     osobnim imenima je vrlo kompleksno, ali najjednostavniji slučaj nam
     je ovdje dovoljno dobar primjer.
+
 
 
