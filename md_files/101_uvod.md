@@ -159,7 +159,7 @@ sučelja za instalaciju *desktop* aplikacija. Na slici
 [1](#fig:wininstall){reference-type="ref" reference="fig:wininstall"}
 vidimo kako izgleda pokretanje instalacije novijih verzija Pythona.
 
-![Instalacija Pythona na Windows OS-u](images/images/windows_install.png){#fig:wininstall
+![Instalacija Pythona na Windows OS-u](windows_install){#fig:wininstall
 width="\\textwidth"}
 
 Dok klik na \"Install Now\" obavlja većinu posla, ipak je korisno
@@ -208,16 +208,18 @@ koncepata i eksperimentaciju s mogućnostima. IDLE se ponaša kao i većina
 aplikacija s grafičkim sučeljem, odnosno moguće ju je pokrenuti kroz
 *Start menu* ili ekvivalente u drugim operativnim sustavima.
 
-![Izvršavanje Python kôda putem sučelja IDLE](images/idle.png){#fig:idle
+![Izvršavanje Python kôda putem sučelja IDLE](idle){#fig:idle
 width="\\textwidth"}
 
 Kada pokrenemo IDLE, dočekati će nas glavno sučelje ovog programa koje
 je prikazano na slici [2](#fig:idle){reference-type="ref"
 reference="fig:idle"}. U glavnom prozoru IDLE-a naredbe se upisuju nakon
-redaka koje počinju s \"$\n>>>$\", a izvršavaju pritiskom na tipku *enter*
+redaka koje počinju s \"$
+>>>$\", a izvršavaju pritiskom na tipku *enter*
 odnosno *return*. U ovom slučaju smo izvršili jednostavan *izraz*
 `1 + 1`{.python}. Kada se taj izraz evaluira pritiskom na tipku *enter*,
-rezultat se ispisuje u idućem retku koja ne započinje s \"$\n>>>$\" kako
+rezultat se ispisuje u idućem retku koja ne započinje s \"$
+>>>$\" kako
 bi bilo jasno da se radi o rezultatu, a ne o naredbi. Obzirom da još
 nismo spomenuli niti jednu posebnu naredbu za programske jezike,
 probajte izvesti nekoliko osnovnih matematičkih radnji. IDLE je sam po
@@ -233,7 +235,7 @@ je vidljivo na slici [3](#fig:idle_text){reference-type="ref"
 reference="fig:idle_text"}. Datoteka sadrži tipičan program za prvi
 susret s programiranjem koji ćemo kasnije podrobnije analizirati.
 
-![IDLE i pisanje tekstualnih datoteka](images/idle_text.png){#fig:idle_text
+![IDLE i pisanje tekstualnih datoteka](idle_text){#fig:idle_text
 width="\\textwidth"}
 
 Novi prozor koji nam se otvorio je jednostavan program za pisanje
@@ -248,7 +250,7 @@ radnje je vidljiv na slici [4](#fig:idle_text_run){reference-type="ref"
 reference="fig:idle_text_run"}.
 
 ![IDLE i rezultat izvršavanja
-programa](images/idle_text_run.png){#fig:idle_text_run width="\\textwidth"}
+programa](idle_text_run){#fig:idle_text_run width="\\textwidth"}
 
 Upravo smo izvršili računalni program! Ovu datoteku nismo morali
 pokretati kroz IDLE, mogli smo je i jednostavno pokrenuti direktno iz
@@ -278,7 +280,8 @@ da su raniji koncepti već usvojeni.
 
 Osim spomenute vrste primjera, postoji još jedna:
 
-Primjeri u kojima neki reci počinju s \"$\n>>>$\" su česti u Python
+Primjeri u kojima neki reci počinju s \"$
+>>>$\" su česti u Python
 literaturi i označavaju da se radi o interaktivnom izvršavanju kôda
 kojeg je korisnik unio u komandnu liniju kao što smo prikazali ranije.
 Na ovaj način se često prikazuju osnovni koncepti, a pojava ovakvog
@@ -288,10 +291,13 @@ i mehanizme.
 
 Riječ je o mogućnosti Pythona da se kôd upisuje i izvršava redak po
 redak što je izvrsno za učenje jezika jer omogućava direktnu
-eksperimentaciju. Reci koji počinju s \"$\n>>>$\" su oni koje mi upisujemo
+eksperimentaciju. Reci koji počinju s \"$
+>>>$\" su oni koje mi upisujemo
 u Python komandnu liniju, a reci bez tih znakova se mogu pojaviti samo
-nakon redaka s početnim \"$\n>>>$\" i prikazuju rezultat izvršavanja
-prijašnjeg retka, ako postoji. Naravno, znakovi \"$\n>>>$\" nisu dio kôda
+nakon redaka s početnim \"$
+>>>$\" i prikazuju rezultat izvršavanja
+prijašnjeg retka, ako postoji. Naravno, znakovi \"$
+>>>$\" nisu dio kôda
 već jednostavno naznaka gdje se nalazi početak linije koja se izvršila.
 Drugim riječima, njih ne prepisujemo kada želimo isprobati kôd!
 
